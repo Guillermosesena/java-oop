@@ -1,11 +1,12 @@
 public class Doctor {
     //Attributes
-    int id;
+    static int id = 0;//autoincrement
     String name;
     String speciality;
 
     Doctor(){
         System.out.println("Building the Doctor object");
+        id++;
     }
 
     //Function overloading
@@ -24,5 +25,13 @@ public class Doctor {
     public void showName()
     {
         System.out.println(name);
+    }
+
+    /**
+     * Description: Print the id of the last doctor object created.
+     * */
+    public void showId()
+    {
+        System.out.println("Doctor ID: "+ id);
     }
 }
