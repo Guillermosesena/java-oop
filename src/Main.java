@@ -1,3 +1,5 @@
+import model.Doctor;
+
 import java.util.Date;
 
 //import static ui.UIMenu.*;
@@ -12,19 +14,19 @@ public class Main {
 
         //System.out.println(myDoctor.getAvailableAppointments());
         System.out.println(myDoctor);
-        /*for (Doctor.AvailableAppointment aA: myDoctor.getAvailableAppointments()) {
+        /*for (model.Doctor.AvailableAppointment aA: myDoctor.getAvailableAppointments()) {
             System.out.println(aA.getDate() + " " +aA.getTime());
         }*/
-        /*Day allDays[] = Day.values();
+        /*model.Day allDays[] = model.Day.values();
 
-        for (Day d: allDays) {
+        for (model.Day d: allDays) {
             System.out.println(d);
         }
 
-        System.out.println(Day.MONDAY);
-        System.out.println(Day.MONDAY.getSpanish());*/
+        System.out.println(model.Day.MONDAY);
+        System.out.println(model.Day.MONDAY.getSpanish());*/
 
-        /*Patient patient = new Patient("Alejandra","alejandra@gmail.com");
+        /*model.Patient patient = new model.Patient("Alejandra","alejandra@gmail.com");
         System.out.println(patient);*/
 
     }

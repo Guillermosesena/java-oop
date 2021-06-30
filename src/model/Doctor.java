@@ -1,3 +1,5 @@
+package model;
+
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -10,7 +12,7 @@ public class Doctor extends User{
      * @param name Name to be assigned to the doctor object
      * @param email Email of the the doctor object
      * **/
-    Doctor(String name, String email){
+    public Doctor(String name, String email){
         super(name, email);
         System.out.println("The name assigned to the doctor object is: "+ name);
         id++;
@@ -39,7 +41,7 @@ public class Doctor extends User{
      * *
     /*public void showId()
     {
-        System.out.println("Doctor ID: "+ id);
+        System.out.println("model.Doctor ID: "+ id);
     }*/
 
     ArrayList<AvailableAppointment> availableAppointments = new ArrayList<>();
