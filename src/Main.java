@@ -15,14 +15,17 @@ public class Main {
         for (Doctor.AvailableAppointment aA: myDoctor.getAvailableAppointments()) {
             System.out.println(aA.getDate() + " " +aA.getTime());
         }*/
-        Day allDays[] = Day.values();
+        /*Day allDays[] = Day.values();
 
         for (Day d: allDays) {
             System.out.println(d);
         }
 
         System.out.println(Day.MONDAY);
-        System.out.println(Day.MONDAY.getSpanish());
+        System.out.println(Day.MONDAY.getSpanish());*/
+
+        Patient patient = new Patient("Alejandra","alejandra@gmail.com");
+        System.out.println(patient);
 
     }
 }

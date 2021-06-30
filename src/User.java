@@ -1,9 +1,9 @@
 public class User {
     static int id = 0;
-    private String name;
-    private String email;
-    private String address;
-    private String phoneNumber;
+    protected String name;
+    protected String email;
+    protected String address;
+    protected String phoneNumber;
 
     public User(String name, String email) {
         this.name = name;
@@ -61,5 +61,11 @@ public class User {
         }
         else if(phoneNumber.length() == 8)
             this.phoneNumber = phoneNumber;
+    }
+
+    @Override
+    public String toString() {
+        return "User: " + name +", Email:" + email +
+                "\nAddress: "+ address + "Phone: " + phoneNumber;
     }
 }
