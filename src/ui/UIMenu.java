@@ -8,7 +8,7 @@ import javax.print.Doc;
 import java.util.ArrayList;
 import java.util.Scanner;
 public class UIMenu {
-    public static String[] MONTHS = {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
+    public static final String[] MONTHS = {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
     public static Doctor doctorLogged;
     public static Patient patientLogged;
 
@@ -64,7 +64,7 @@ public class UIMenu {
 
         boolean emailCorrect = false;
         do{
-            System.out.println("Insert your email: [a@a.com");
+            System.out.println("Insert your email: [a@a.com]");
             Scanner sc = new Scanner(System.in);
             String email = sc.nextLine();
             if(userType==1){
@@ -82,7 +82,7 @@ public class UIMenu {
                     if(p.getEmail().equals(email)){
                         emailCorrect=true;
                         //Set user data
-                        patientLogged = p; 
+                        patientLogged = p;
                     }
                 }
             }
