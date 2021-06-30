@@ -1,6 +1,4 @@
-import model.Doctor;
-import model.Patient;
-import model.User;
+import model.*;
 
 import javax.print.Doc;
 import java.util.Date;
@@ -35,5 +33,20 @@ public class Main {
         user.showDataUser();
         User userPa = new Patient("Anahi", "ana@gmail.com");
                 userPa.showDataUser();
+        User user_ = new User("Ahani","ana@gmail.com") {
+            @Override
+            public void showDataUser() {
+                System.out.println("Doctor");
+            }
+        };
+        user_.showDataUser();
+
+        ISchedulable iSchedulable = new ISchedulable() {
+            @Override
+            public void schedulable(Date date, String time) {
+
+            }
+        } ;
+        
     }
 }
