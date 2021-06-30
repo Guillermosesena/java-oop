@@ -12,7 +12,7 @@ public class Patient extends User{
      * @param name Name to be assigned to the patient object
      * @param email email of the the patient object
      * **/
-    Patient(String name, String email){
+    public Patient(String name, String email){
         super(name, email);
     }
 
@@ -67,5 +67,11 @@ public class Patient extends User{
     public String toString() {
         return super.toString() + "\n Age: " + birthday + "\n Weight: " +getWeight()
                 + "\n Height: " + getHeight() + "\n Blood: " + blood;
+    }
+
+    @Override
+    public void showDataUser() {
+        System.out.println("Patient");
+        System.out.println("Historia desde nacimiento");
     }
 }
