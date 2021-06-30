@@ -34,13 +34,13 @@ public class Doctor extends User{
         System.out.println(name);
     }*/
 
-    /**
+    /*/**
      * Description: Prints the id of the last doctor object created.
-     * */
-    public void showId()
+     * *
+    /*public void showId()
     {
         System.out.println("Doctor ID: "+ id);
-    }
+    }*/
 
     ArrayList<AvailableAppointment> availableAppointments = new ArrayList<>();
 
@@ -51,6 +51,13 @@ public class Doctor extends User{
     public ArrayList<AvailableAppointment> getAvailableAppointments(){
         return availableAppointments;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + "\nSpeciality: " + speciality
+                + "\n Available: " + availableAppointments.toString();
+    }
+
 
     public static class AvailableAppointment{
         private int id_availableAppointment;
@@ -85,7 +92,13 @@ public class Doctor extends User{
         public void setTime(String time) {
             this.time = time;
         }
+
+        @Override
+        public String toString() {
+            return "Available Appointments \nDate: " + date + "\nTime: "+ time;
+        }
     }
+
 
 
 }
