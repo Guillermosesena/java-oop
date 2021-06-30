@@ -5,10 +5,10 @@ public class Main {
 
         Patient myPatient = new Patient("Juan Hernandez","juan.hernandez@gmail.com");
 
-        System.out.println(myPatient.getName());
-        System.out.println(myPatient.getName());
-        //showMenu();
-       // Patient myPatient = new Patient("Juan Hernandez","juan.hernandez@gmail.com");
+        myPatient.setWeight(60.0);
+        System.out.println(myPatient.getWeight());
+        myPatient.setPhoneNumber("1234567890");
+        System.out.println(myPatient.getPhoneNumber());
 
     }
 }

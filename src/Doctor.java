@@ -10,9 +10,9 @@ public class Doctor {
 
     //Function overloading
     /**
-     * Description: Build a new object of doctor class
-     * @name Name to be assigned to the doctor object
-     * @speciality Speciality to be assigned to the doctor object
+     * Description: Builds a new object of doctor class
+     * @param name Name to be assigned to the doctor object
+     * @param speciality Speciality to be assigned to the doctor object
      * **/
     Doctor(String name, String speciality){
         System.out.println("The name assigned to the doctor object is: "+ name);
@@ -23,7 +23,7 @@ public class Doctor {
 
     //Methods
     /**
-     * Description: Print the name of the doctor.
+     * Description: Prints the name of the doctor.
      * */
     public void showName()
     {
@@ -31,7 +31,7 @@ public class Doctor {
     }
 
     /**
-     * Description: Print the id of the last doctor object created.
+     * Description: Prints the id of the last doctor object created.
      * */
     public void showId()
     {
