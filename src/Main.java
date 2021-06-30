@@ -1,14 +1,19 @@
+import java.util.Date;
+
 import static ui.UIMenu.*;
 
 public class Main {
     public static void main(String[] args) {
 
-        Patient myPatient = new Patient("Juan Hernandez","juan.hernandez@gmail.com");
+        Doctor myDoctor = new Doctor("Anah Salgado", "dentist");
+        myDoctor.addAvailableAppointment(new Date(),"4 pm");
+        myDoctor.addAvailableAppointment(new Date(),"10 pm");
+        myDoctor.addAvailableAppointment(new Date(),"1 pm");
 
-        myPatient.setWeight(60.0);
-        System.out.println(myPatient.getWeight());
-        myPatient.setPhoneNumber("1234567890");
-        System.out.println(myPatient.getPhoneNumber());
+        System.out.println(myDoctor.getAvailableAppointments());
 
+        for (Doctor.AvailableAppointment aA: myDoctor.getAvailableAppointments()) {
+            System.out.println(aA.getDate() + " " +aA.getTime());
+        }
     }
 }
