@@ -14,5 +14,8 @@ public class Main {
         myDoctor.showId();
 
         showMenu();
+
+        Patient myPatient = new Patient("Juan Hernandez","juan.hernandez@gmail.com");
+
     }
 }
