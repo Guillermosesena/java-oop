@@ -7,6 +7,7 @@ import java.util.Date;
 
 public class Doctor extends User{
     //Attributes
+    private ArrayList<AvailableAppointment> availableAppointments = new ArrayList<>();
     private String speciality;
 
     /**
@@ -44,7 +45,7 @@ public class Doctor extends User{
         System.out.println("model.Doctor ID: "+ id);
     }*/
 
-    ArrayList<AvailableAppointment> availableAppointments = new ArrayList<>();
+
 
     public void addAvailableAppointment(String date, String time){
 
