@@ -73,6 +73,7 @@ public class UIMenu {
                         emailCorrect=true;
                         //Set user data
                         doctorLogged = d;
+                        UIDoctorMenu.showDoctorMenu();
                     }
                 }
 
@@ -86,7 +87,7 @@ public class UIMenu {
                     }
                 }
             }
-        }while(emailCorrect);
+        }while(!emailCorrect);
 
     }
 

@@ -16,9 +16,7 @@ public class Doctor extends User{
      * **/
     public Doctor(String name, String email){
         super(name, email);
-        System.out.println("The name assigned to the doctor object is: "+ name);
         id++;
-        this.speciality = speciality;
     }
 
     public String getSpeciality() {

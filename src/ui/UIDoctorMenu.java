@@ -23,6 +23,7 @@ public class UIDoctorMenu {
 
             switch(response){
                 case 1:
+                    showAddAvailableAppointmentsMenu();
                     break;
                 case 2:
                     break;
@@ -41,7 +42,7 @@ public class UIDoctorMenu {
             System.out.println("::Add Appointments");
             System.out.println("::Select a Month");
 
-            for(int i = 0; i< i++;){
+            for(int i = 0; i< 4;i++){
                 int j = i+1;
                 System.out.println(j+". " + UIMenu.MONTHS[i]);
             }
@@ -52,7 +53,7 @@ public class UIDoctorMenu {
             if(response > 0 && response < 4){
             //1,2,3
                 int monthSelected = response;
-                System.out.println(monthSelected + ". " + UIMenu.MONTHS[monthSelected]);
+                System.out.println(monthSelected + ". " + UIMenu.MONTHS[monthSelected-1]);
                 System.out.println("Insert the date available:[dd/mm/yyyy]");
                 String date = sc.nextLine();
                 System.out.println("Your data is: "+ date + "\n1. Correct \n2. Change Date");
