@@ -1,6 +1,6 @@
-import java.util.Date;
+//import java.util.Date;
 
-import static ui.UIMenu.*;
+//import static ui.UIMenu.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -20,7 +20,7 @@ public class Main {
         for (Day d: allDays) {
             System.out.println(d);
         }
-        
+
         System.out.println(Day.MONDAY);
         System.out.println(Day.MONDAY.getSpanish());
 

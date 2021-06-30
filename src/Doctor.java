@@ -1,28 +1,27 @@
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Date;
 
-public class Doctor {
+public class Doctor extends User{
     //Attributes
-    static int id = 0;//autoincrement
-    private String name;
     private String speciality;
 
-
-    Doctor(){
-        System.out.println("Building the Doctor object");
-    }
-
-    //Function overloading
     /**
      * Description: Builds a new object of doctor class
      * @param name Name to be assigned to the doctor object
-     * @param speciality Speciality to be assigned to the doctor object
+     * @param email Email of the the doctor object
      * **/
-    Doctor(String name, String speciality){
+    Doctor(String name, String email){
+        super(name, email);
         System.out.println("The name assigned to the doctor object is: "+ name);
         id++;
-        this.name = name;
+        this.speciality = speciality;
+    }
+
+    public String getSpeciality() {
+        return speciality;
+    }
+
+    public void setSpeciality(String speciality) {
         this.speciality = speciality;
     }
 
@@ -30,10 +29,10 @@ public class Doctor {
     /**
      * Description: Prints the name of the doctor.
      * */
-    public void showName()
+    /*public void showName()
     {
         System.out.println(name);
-    }
+    }*/
 
     /**
      * Description: Prints the id of the last doctor object created.
