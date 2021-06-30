@@ -6,16 +6,19 @@ public class Doctor {
 
     Doctor(){
         System.out.println("Building the Doctor object");
-        id++;
     }
 
     //Function overloading
     /**
      * Description: Build a new object of doctor class
      * @name Name to be assigned to the doctor object
+     * @speciality Speciality to be assigned to the doctor object
      * **/
-    Doctor(String name){
+    Doctor(String name, String speciality){
         System.out.println("The name assigned to the doctor object is: "+ name);
+        id++;
+        this.name = name;
+        this.speciality = speciality;
     }
 
     //Methods

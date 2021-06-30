@@ -9,13 +9,12 @@ public class Main {
         myDoctor.showId();
         //System.out.println(Doctor.id);
 
-
-        Doctor myDoctorAnn = new Doctor();
+        Doctor myDoctorAnn = new Doctor("Ann Sanchez","pediatrician");
+        System.out.println(myDoctorAnn.speciality);
         myDoctor.showId();
 
-        showMenu();
-
-        Patient myPatient = new Patient("Juan Hernandez","juan.hernandez@gmail.com");
+        //showMenu();
+       // Patient myPatient = new Patient("Juan Hernandez","juan.hernandez@gmail.com");
 
     }
 }
