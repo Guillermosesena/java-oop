@@ -14,7 +14,7 @@ public class Main {
         myDoctor.addAvailableAppointment("05/05/2021","1 pm");
 
         showMenu();
-
+        System.exit(0);
         /*
         User user = new Doctor("Anahi","anahi@gmail.com");
         user.showDataUser();

@@ -7,6 +7,9 @@ import model.Patient;
 import javax.print.Doc;
 import java.util.ArrayList;
 import java.util.Scanner;
+
+
+
 public class UIMenu {
     public static final String[] MONTHS = {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
     public static Doctor doctorLogged;
@@ -39,12 +42,14 @@ public class UIMenu {
 
                 case 0:
                     System.out.println("Thank you for you visit");
+                    response =0;
                     break;
 
                 default:
                     System.out.println("Please select a correct answer");
             }
         } while (response != 0);
+
     }
 
     private static void authUser(int userType)
@@ -84,6 +89,7 @@ public class UIMenu {
                         emailCorrect=true;
                         //Set user data
                         patientLogged = p;
+                        UIPatientMenu.showPatientMenu();
                     }
                 }
             }

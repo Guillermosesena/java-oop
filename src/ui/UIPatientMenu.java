@@ -15,7 +15,7 @@ public class UIPatientMenu {
         do{
             System.out.println("\n\n");
             System.out.println("Patient");
-            System.out.println("Welcome: " + UIMenu.patientLogged);
+            System.out.println("Welcome: " + UIMenu.patientLogged.getName());
             System.out.println("1. Book an appointment");
             System.out.println("2. My appointment");
             System.out.println("0. Logout");
@@ -26,9 +26,11 @@ public class UIPatientMenu {
                     showBookAppointmentMenu();
                     break;
                 case 2:
+                    showPatientMyAppointments();
                     break;
                 case 0:
                     UIMenu.showMenu();
+                    response=0;
                     break;
             }
         }while(response!=0);
@@ -52,7 +54,8 @@ public class UIPatientMenu {
                 Map<Integer, Doctor> doctorAppointments = new TreeMap<>();
                 for (int j = 0; j < availableAppointments.size(); j++) {
                     k++;
-                    System.out.println(k + ". " + availableAppointments.get(i).getDate());
+                    System.out.println(k + ". " + availableAppointments.get(i).getDate()
+                    + " " + availableAppointments.get(i).getTime());
                     doctorAppointments.put(Integer.valueOf(j), UIDoctorMenu.doctorsAvailableAppointments.get(i));
                     doctors.put(Integer.valueOf(k),doctorAppointments);
                 }
@@ -70,7 +73,7 @@ public class UIPatientMenu {
                                 doctorSelected.getAvailableAppointments().get(indexDate).getDate() +
                         ". Time: " +
                         doctorSelected.getAvailableAppointments().get(indexDate).getTime());
-                System.out.println("Confirm your appointment: \n1. Yes \2.Change Data");
+                System.out.println("Confirm your appointment: \n1. Yes \n2.Change Data");
                 response = Integer.valueOf(sc.nextLine());
                 if(response ==1) {
                     UIMenu.patientLogged.addAppointmentDoctors(
@@ -84,7 +87,7 @@ public class UIPatientMenu {
         }while(response !=0);
     }
 
-    private static void showPatientMyAppointment(){
+    private static void showPatientMyAppointments(){
         int response=0;
         do{
             System.out.println("::My Appointments");
@@ -96,9 +99,9 @@ public class UIPatientMenu {
                 int j= i+1;
                 System.out.println(j +". " +
                         "Date: " + UIMenu.patientLogged.getAppointmentDoctors().get(i).getDate() +
-                        "Time: " + UIMenu.patientLogged.getAppointmentDoctors().get(i).getTime()+
+                        "\nTime: " + UIMenu.patientLogged.getAppointmentDoctors().get(i).getTime()+
                         "\nDoctor: " +UIMenu.patientLogged.getAppointmentDoctors().get(i).getDoctor()
-                );      
+                );
             }
             System.out.println("0. Return");
         }while (response !=0 );
